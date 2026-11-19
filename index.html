@@ -164,6 +164,50 @@ footer{background:var(--navy);color:#8c9bb5;padding:32px 0;font-size:.93rem}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
 footer .brand{color:#fff;font-size:1.05rem}
 footer .brand img{width:28px;height:28px;border-radius:24%}
+body{overflow-x:clip}
+.direct a{min-width:0;overflow-wrap:anywhere}
+@media (max-width:640px){
+.wrap{padding:0 20px}
+section,.contact{padding:56px 0}
+.btn{min-height:44px}
+
+.hero{padding:40px 0 36px}
+.hero-grid{gap:36px}
+.hero h1{font-size:2.2rem}
+.hero .sub{font-size:1.05rem;margin-top:18px}
+.hero .plat{margin-top:24px}
+.plat-label{width:100%}
+.chip{flex:1 1 100%}
+.phone{justify-self:stretch;max-width:none;padding:14px;border-width:5px}
+.ph-top{flex-wrap:wrap}
+
+.chain-box{overflow:visible;margin-top:36px}
+.chain{min-width:0;grid-template-columns:1fr 1fr;gap:10px;padding-top:0;text-align:left}
+.chain::before,.chain i{display:none}
+.chain span{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1.5px solid #2c3d5c;border-radius:12px;background:var(--navy2);font-size:.95rem}
+.chain span::before{position:static;margin:0;flex:none;width:10px;height:10px;background:var(--amber);border:0}
+.chain-cap{font-size:.92rem}
+
+section h2{max-width:none}
+.feat{gap:28px}
+.trades li{font-size:.9rem;padding:.4rem .8rem}
+.steps{gap:28px;margin-top:28px}
+.flow{margin-top:40px}
+.pills{gap:8px}
+.sep{display:none}
+.pill{padding:.55rem 1rem}
+.lc{padding:18px;gap:14px}
+.roles{margin-top:28px}
+.roles div{padding:22px}
+.facts-grid{gap:28px}
+.status{padding:18px 20px}
+
+.contact .grid{gap:32px}
+.direct,.after{max-width:none}
+.next-h{margin-top:32px}
+form{padding:20px}
+footer .wrap{flex-direction:column;align-items:flex-start}
+}
 </style>
 </head>
 <body>
