@@ -22,7 +22,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 h1,h2,h3{font-family:var(--head);line-height:1.08;margin:0;letter-spacing:-.02em}
 p{margin:0}
 p,.roles li{text-align:left;hyphens:none;text-wrap:pretty}
-h1,h2,h3{text-wrap:balance}
+h1,h2{text-wrap:pretty}
+h3{text-wrap:balance}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
@@ -78,6 +79,7 @@ section{padding:88px 0}
 section h2{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:700;max-width:20ch}
 .lead{color:var(--mute);margin-top:16px;max-width:56ch}
 .lead-lg{font-size:1.15rem;line-height:1.6}
+.callout{margin-top:28px;padding:16px 20px;border-left:6px solid var(--amber);background:var(--surface);border-radius:0 14px 14px 0;font:600 1.15rem/1.45 var(--head);color:var(--ink);max-width:56ch}
 .lead-lg strong{color:var(--ink);font-weight:600}
 .trades{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;list-style:none}
 .trades li{display:flex;align-items:center;gap:8px;padding:.45rem .9rem;border:1.5px solid var(--line);background:var(--surface);border-radius:999px;font-weight:600;font-size:.95rem}
@@ -274,7 +276,8 @@ html{overflow-x:clip}
 
 <section id="features">
 <div class="wrap feat">
-<div><h2>One app that keeps the office and the field working from the same job.</h2><p class="lead lead-lg"><strong>Built for service businesses whose work happens at the customer’s premises.</strong> Office staff plan and track every job, and technicians capture the work on site, with or without signal.</p>
+<div><h2>One app that keeps the office and the field working from the same job.</h2><p class="callout">Built for service businesses whose work happens at the customer’s premises.</p>
+<p class="lead lead-lg">Office staff plan and track every job, and technicians capture the work on site, with or without signal.</p>
 <ul class="trades">
 <li>Air conditioning</li>
 <li>Generators</li>
