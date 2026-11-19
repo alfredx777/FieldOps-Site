@@ -26,7 +26,7 @@ h1,h2{text-wrap:pretty}
 h3{text-wrap:balance}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
 .btn{display:inline-block;font:600 1rem var(--body);padding:.85rem 1.4rem;border-radius:12px;text-decoration:none;border:2px solid transparent;cursor:pointer}
 .btn-amber{background:var(--amber);color:var(--accent-ink)}
 .btn-amber:hover{filter:brightness(1.07)}
@@ -230,6 +230,8 @@ html{overflow-x:clip}
 .steps li:last-child::after{display:none}
 .steps h3{padding-top:11px}
 }
+@media (min-width:1600px){html{font-size:112.5%}.wrap{max-width:1400px}}
+@media (min-width:2200px){html{font-size:125%}.wrap{max-width:1600px}}
 </style>
 </head>
 <body>
