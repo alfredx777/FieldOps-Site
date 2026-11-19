@@ -21,8 +21,8 @@ body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 va
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navy);z-index:20}
 h1,h2,h3{font-family:var(--head);line-height:1.08;margin:0;letter-spacing:-.02em}
 p{margin:0}
-p,.roles li{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
-.ph-card p,.hint,.hint-l{text-align:left}
+p,.roles li{text-align:left;hyphens:none;text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
