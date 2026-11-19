@@ -215,6 +215,15 @@ footer .wrap{flex-direction:column;align-items:flex-start}
 .after{display:none}
 }
 html{overflow-x:clip}
+@media (max-width:820px){
+.steps{gap:0;margin-top:28px}
+.steps li{position:relative;border-top:0;padding:0 0 32px 64px}
+.steps li::before{position:absolute;left:0;top:0;margin:0;width:44px;height:44px;font-size:1.2rem}
+.steps li::after{content:"";position:absolute;left:21px;top:52px;bottom:8px;width:2px;background:var(--mute);opacity:.45}
+.steps li:last-child{padding-bottom:0}
+.steps li:last-child::after{display:none}
+.steps h3{padding-top:11px}
+}
 </style>
 </head>
 <body>
