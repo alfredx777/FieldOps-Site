@@ -393,11 +393,18 @@ html{overflow-x:clip}
 </footer>
 
 <script>
-document.getElementById("f").addEventListener("submit",function(e){
+var form=document.getElementById("f"),st=document.getElementById("status"),sb=form.querySelector("button");
+var KEY="3b2f9fbc-2604-49d2-8baf-f2b68ee02c23";
+form.addEventListener("submit",function(e){
 e.preventDefault();
-var d=new FormData(e.target),to="alfredx777@outlook.com";
-var body="Name: "+d.get("name")+"\nEmail: "+d.get("email")+"\nCompany: "+(d.get("company")||"-")+"\n\n"+d.get("msg");
-location.href="mailto:"+to+"?subject="+encodeURIComponent("FieldOps enquiry from "+d.get("name"))+"&body="+encodeURIComponent(body);
+var d=new FormData(form);
+sb.disabled=true;sb.textContent="Sending…";st.className="hint";st.textContent="";
+fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+body:JSON.stringify({access_key:KEY,subject:"FieldOps enquiry from "+d.get("name"),from_name:"FieldOps website",name:d.get("name"),email:d.get("email"),company:d.get("company"),message:d.get("msg"),botcheck:d.get("botcheck")?"true":""})})
+.then(function(r){return r.json()})
+.then(function(j){if(!j.success)throw new Error();form.reset();st.className="hint ok";st.textContent="Thank you. Your message has been sent."})
+.catch(function(){st.className="hint err";st.textContent="Something went wrong. Please try again, or email me directly."})
+.then(function(){sb.disabled=false;sb.textContent="Send message"});
 });
 var LC={
 draft:{a:"Dispatcher or admin, in the office",r:"The job is being prepared with the equipment and access notes. It becomes Assigned as soon as a technician is chosen.",o:"Created in the desktop app before dispatch."},
